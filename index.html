@@ -1,1 +1,336 @@
-Hi! This will be live soon!
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StyleTRF: Stylizing Tensorial Radiance Fields</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" sizes="25x25" href=".github/icon.gif">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">StyleTRF: Stylizing Tensorial Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rahulgoel.xyz">Rahul Goel</a></span>,
+            <span class="author-block">
+              <a href="https://dhawal1939.github.io">Dhawal Sirikonda</a></span>,
+            <span class="author-block">
+              <a href="https://sophont01.github.io/">Saurabh Saini</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.co.in/citations?user=3HKjt_IAAAAJ&hl=en">P.J. Narayanan</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://cvit.iiit.ac.in/research/publications">CVIT, IIIT Hyderabad</a></span>
+          </div>
+
+          <h1 class="is-size-5">ICVGIP 2022</h1>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://iiitaphyd-my.sharepoint.com/:b:/g/personal/dhawal_sirikonda_research_iiit_ac_in/EfERIufS5s5HowJY1Yth5i0BkZTPK6JywI1CI5GUBluzRA?e=qL6Byu"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=L9YtSe7JEG8"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/playground/gt.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/ganesh.jpg" class="img-overlay"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/playground/ganesh.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/mosaic.jpg" class="img-overlay"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/playground/mosaic.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/mudbath.jpg" class="img-overlay"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/playground/mudbath.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+            <image src=".github/styles/santamaria.jpg" class="img-overlay"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/playground/santamaria.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/udnie.jpg" class="img-overlay"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/playground/udnie.webm"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="subtitle has-text-centered">
+  <span class="dnerf">StyleTRF</span> applies stylization on radiance fields in less than 40 seconds!
+  </h2>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            Stylized view generation of scenes captured casually using a camera
+            has received much attention recently. The geometry and appearance of
+            the scene are typically captured as neural point sets or neural
+            radiance fields in the previous work. An image stylization method is
+            used to stylize the captured appearance by training its network
+            jointly or iteratively with the structure capture network. The
+            state-of-the-art SNeRF method trains the NeRF and stylization
+            network in an alternating manner. These methods have high training
+            time and require joint optimization.  In this work, we present
+            StyleTRF, a compact, quick-to-optimize strategy for stylized view
+            generation using TensoRF. The appearance part is fine-tuned using
+            sparse stylized priors of a few views rendered using the TensoRF
+            representation for a few iterations. Our method thus effectively
+            decouples style-adaption from view capture and is much faster than
+            the previous methods. We show state-of-the-art results on several
+            scenes used for this purpose.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="pipeline">
+  <div class="container is-max-desktop">
+    <div>
+      <img src=".github/pipeline.jpg" alt="pipeline diagram showing interactive segmentation">
+      <h2 class="has-text-centered">
+           <b>System overview:</b> The pipeline diagram presents an overview of
+           the strategy employed by our work. We first optimize Tensorial
+           Radiance Fields for representation of the scene as proposed by
+           Concurrently we optimize stylization module utilizing Johnson et al.
+           method on COCO14-dataset. The stylization module is then used to
+           stylize a sparse set of novel views generated by the pre-optimized
+           TensoRF. These stylized views act as sparse style-priors and are used
+           to fine-tune the appearance of the previously optimized scene
+           representation. It is to be noted that we freeze the density terms of
+           the TensoRF and only alter the appearance vectors which retains
+           geometric while adapting the novel style.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/flower/gt.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/mosaic.jpg"></image>
+          <video class="output-video" poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/flower/mosaic.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/santamaria.jpg"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/flower/santamaria.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/udnie.jpg"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/flower/udnie.webm"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/fern/gt.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/santamaria.jpg"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/fern/santamaria.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/udnie.jpg"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/fern/udnie.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/mosaic.jpg"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/fern/mosaic.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item">
+          <image src=".github/styles/mediter.jpg"></image>
+          <video poster="" autoplay controls muted loop playsinline height="100%">
+            <source src=".github/fern/mediter.webm"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Concurrent Works</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <a href="https://www.cs.cornell.edu/projects/arf/">ARF: Artistic Radiance Fields</a> incorporates artistic brush-strokes using an NNFM based loss function.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{goel2022styletrf,
+    author = {Goel, Rahul and Sirikonda, Dhawal and Saini, Saurabh and Narayanan, P. J.},
+    title = {StyleTRF: Stylizing Tensorial Radiance Fields},
+    year = {2022},
+    doi = {10.1145/3571600.3571643},
+    booktitle = {Proceedings of the Thirteenth Indian Conference on Computer Vision, Graphics and Image Processing},
+    series = {ICVGIP '22}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The template for this website has been borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
